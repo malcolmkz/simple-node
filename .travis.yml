@@ -5,4 +5,4 @@ script:
   - docker build -t simple-node .
   - docker tag simple-node malcolmkz/simple-node
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-  - docker push simple-node
+  - docker push malcolmkz/simple-node
