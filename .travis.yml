@@ -1,0 +1,8 @@
+services:
+  - docker
+
+script:
+  - docker build -t simple-node .
+  - docker tag simple-node malcolmkz/simple-node
+  - docker login --username=DOCKERHUB_USERNAME --password=DOCKERHUB_PASSWORD
+  - docker push simple-node
